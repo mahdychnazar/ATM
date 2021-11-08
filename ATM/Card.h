@@ -11,7 +11,7 @@ private:
 	int user;
 
 public:
-	Card();
+	Card() {};
 	Card(const QString& id, const QString& pin, const long double sum, const bool is_active, const int user_id) :
 		id(id), pin(pin),sum(sum),isActive(is_active),user(user_id)
 	{};

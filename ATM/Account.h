@@ -7,7 +7,6 @@ private:
 
 	int id;
 	QString name;
-	Card* cards;
 
 
 };
