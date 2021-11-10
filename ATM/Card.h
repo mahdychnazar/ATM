@@ -18,7 +18,11 @@ public:
 	Card(const char* id, const char* pin, const long double sum, const bool is_active, const int user_id):
 		id(QString(id)), pin(QString(pin)), sum(sum), isActive(is_active), user(user_id)
 	{};
-	Card(const Card&);
+	Card(const Card& toCopy):
+		id(toCopy.getId()), pin(toCopy.getPin()), sum(toCopy.getSum()), isActive(toCopy.getIsActive()),user(toCopy.getUser())
+	{
+			
+	};
 	~Card() {};
 
 	QString getId() const { return id; };
