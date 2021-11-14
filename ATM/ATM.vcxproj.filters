@@ -34,10 +34,13 @@
     <ClInclude Include="Bank.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Transaction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="Card.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Transaction.h">
+    <ClInclude Include="ATM.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
