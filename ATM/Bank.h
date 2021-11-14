@@ -75,6 +75,8 @@ public:
 	
 	bool doTransaction(const char* sender, const char* reciever, const int sum)
 	{
+		bool isOk = false;
+
 		QSqlDatabase::database().transaction();
 		QSqlQuery a_query;
 		QString str_insert = "INSERT INTO TRANSACTIONS (sender, reciever, summ, dateTime, transaction_id) "
@@ -84,7 +86,7 @@ public:
 			.arg(sum)
 			.arg(QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss"))
 			.arg(transactions + 1);
-		bool isOk = a_query.exec(str);
+		isOk = a_query.exec(str);
 		QString str_from = "UPDATE CARDS SET summ = summ+%1 WHERE card_id = '%2'";
 		 str = str_from.arg(-sum)
 			.arg(sender);

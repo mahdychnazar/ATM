@@ -14,6 +14,7 @@ int main(int argc, char* argv[])
 	Card c;
 	//qDebug() << bank.getCard("1000000000000002", "1111", c);
 	//qDebug() << c.getId() + " " + c.getPin()+ " ";
+	cout << "hello";
 	qDebug() << bank.isCard("1000000000000003");
 	return a.exec();
 
